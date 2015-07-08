@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>App Engine Demo</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body style="text-align:center">
+
+    <div>
+        <h3>Topics</h3>
+        <select id="topics">
+        </select>
+        <br/><br/>
+        <button onclick="createTopic()">Create new topic...</button>
+        <button onclick="deleteTopic()">Delete selected</button>
+    </div>
+
+    <br/><hr/><br/>
+    <div>
+        <h3>Publish</h3>
+        <textarea cols="100" rows="10" id="data"></textarea>
+        <br/>
+        <button onclick="publishData()">Send</button>
+    </div>
+
+    <script src="./main.js"></script>
+
+</body>
+</html>
