@@ -1,26 +1,45 @@
 <!doctype html>
 <html>
 <head>
-    <title>App Engine Demo</title>
+    <title>Simple PubSub Manager</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
-<body style="text-align:center">
+<body style="text-align:center;font-family: Helvetica,Arial,sans-serif;">
 
     <div>
         <h3>Topics</h3>
         <select id="topics">
         </select>
         <br/><br/>
-        <button onclick="createTopic()">Create new topic...</button>
-        <button onclick="deleteTopic()">Delete selected</button>
+        <button onclick="createTopic()">Create...</button>
+        <button onclick="deleteTopic()">Delete</button>
     </div>
 
-    <br/><hr/><br/>
+    <br/>
     <div>
         <h3>Publish</h3>
         <textarea cols="100" rows="10" id="data"></textarea>
         <br/>
         <button onclick="publishData()">Send</button>
+    </div>
+
+    <br/><hr/><br/>
+
+    <div>
+        <h3>Subscriptions</h3>
+        <select id="subs">
+        </select>
+        <br/><br/>
+        <button onclick="createSub()">Create...</button>
+        <button onclick="deleteSub()">Delete</button>
+    </div>
+
+    <br/>
+    <div>
+        <h3>Receive</h3>
+        <textarea cols="100" rows="10" id="receiver" disabled="true"></textarea>
+        <br/>
+        <button onclick="fetchData()">Fetch</button>
     </div>
 
     <script src="./main.js"></script>
